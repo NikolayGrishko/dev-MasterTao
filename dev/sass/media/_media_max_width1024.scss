@@ -17,54 +17,53 @@
             height: 72px;
             z-index: 2;
         }
-    }
 
-    .header-logo-link {
-        z-index: 2;
-    }
-
-    .heder-logo-img {
-        max-width: 126px;
-    }
-
-    .header-nav {
-        flex-direction: column;
-        background-color: $bg-secondary;
-        position: absolute;
-        z-index: 1;
-        top: -508px;
-        left: 0;
-        padding: 41px 0 60px 0;
-        transition: 0.7s;
-        
-        &.show {
-            top: 72px;
-        }          
-
-        &__list {
+        &-logo-link {
+            z-index: 2;
+        }
+    
+        &-logo-img {
+            max-width: 126px;
+        }
+    
+        &-nav {
             flex-direction: column;
-            align-items: center;
-            margin-bottom: 38px;
+            background-color: $bg-secondary;
+            position: absolute;
+            z-index: 1;
+            top: -508px;
+            left: 0;
+            padding: 41px 0 60px 0;
+            transition: 0.7s;
+            
+            &.show {
+                top: 72px;
+            }          
+    
+            &__list {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 38px;
+
+                .header-list-link {
+                    font-size: 24px;
+                    line-height: 184%;
+                    padding: 0;
+                }
+            }
+    
+            .btn-primary {
+                max-width: 295px;
+                width: 100%;
+                padding: 22px;
+                justify-content: center;
+                margin: 0 auto;
+                font-size: 15px;
+            }
         }
-
-        .btn-primary {
-            max-width: 295px;
-            width: 100%;
-            padding: 22px;
-            justify-content: center;
-            margin: 0 auto;
-            font-size: 15px;
+        
+        .hamburger {
+            z-index: 2;
         }
     }
-
-    .hamburger {
-        z-index: 2;
-    }
-
-    .header-list-link {
-        font-size: 24px;
-        line-height: 184%;
-        padding: 0;
-    }
-
 }    
