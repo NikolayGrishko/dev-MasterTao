@@ -20,8 +20,10 @@ $('#first-screen-slider').slick({
       }
     ],
 
-});
+  });
 
+
+$('select').niceSelect();
 
 
 const fileInput = document.querySelector('#calculation-file');
@@ -36,3 +38,17 @@ fileInput.addEventListener('change', () => {
 //   console.log(this.files[0].name);
 //   fileName.innerHTML = this.files[0].name;
 // });
+
+const controledField = document.querySelectorAll('[type="checkbox"]');
+
+controledField.forEach(input =>{
+  input.closest('.input-wrapper').classList.add('controled-wrapper')
+  input.closest('.col').classList.add('controled-col')
+})
+
+
+const fileField = document.querySelectorAll('[type="file"]');
+
+fileField.forEach(input =>{
+  input.closest('.input-wrapper').classList.add('file-wrapper')
+})

@@ -1,33 +1,33 @@
 @media screen and (max-width: 1024px) {
     h1,
-.h1 {
-    font-size: 32px;
-}
+    .h1 {
+        font-size: 32px;
+    }
 
-h2,
-.h2 {
-    font-size: 36px;
-}
+    h2,
+    .h2 {
+        font-size: 36px;
+    }
 
-h3,
-.h3 {
-    font-size: 24px;
-}
+    h3,
+    .h3 {
+        font-size: 24px;
+    }
 
-h4,
-.h4 {
-    font-size: 22px;
-}
+    h4,
+    .h4 {
+        font-size: 22px;
+    }
 
-h5,
-.h5 {
-    font-size: 16px;
-}
+    h5,
+    .h5 {
+        font-size: 16px;
+    }
 
-h6,
-.h6 {
-    font-size: 15px;
-}
+    h6,
+    .h6 {
+        font-size: 15px;
+    }
 
     .container {
         padding-right: $container-mobile-padding;
@@ -69,7 +69,7 @@ h6,
             left: 0;
             padding: 41px 0 60px 0;
             transition: 0.7s;
-            box-shadow: 14px 22px 40px 7px #11132166;
+            box-shadow: 14px 22px 40px 0 #11132166;
             
             &.show {
                 top: 72px;
@@ -102,11 +102,11 @@ h6,
         }
     }
 
-    .first-screen {
-        .banner-item {
-            border-radius: 0;
-        }
+    section.first-screen {
+        margin-bottom: 55px;
+    }
 
+    .first-screen {
         .container {
             display: flex;
             flex-direction: column;
@@ -115,6 +115,10 @@ h6,
             padding: 26px 40px 12px;
             position: relative;
             z-index: 1;
+        }
+
+        .banner-item {
+            border-radius: 0;
         }
 
         .banner-title {
@@ -136,4 +140,71 @@ h6,
             background-color: #04091199;
         }
     }
-}    
+
+
+
+
+    .calculation-form {
+        min-width: initial;
+        padding: 52px 27px 34px;
+        margin: 0 auto;
+
+        .row {
+            flex-direction: column;
+        }
+
+        & .col.controled-col {
+            padding-top: 7px;
+            margin-bottom: 4px;
+        }
+
+        .input-wrapper.file-wrapper {
+            padding-top: 32px;
+        }
+    }
+
+    .template-title.col-lg-7 h2:after,
+    .calculation-decoration {
+        display: none;
+    }
+
+    .template-title {
+        h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+
+    .calculation {
+
+        /*type 2*/
+        .template-title {
+
+            &.col-lg-7 {
+                margin-bottom: 56px;
+
+                &:after {
+                    display: inline-block;
+                }
+
+                h2 {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .btn-lg {
+            padding: 19.5px 59px 19.5px 32px;
+        
+            & .icon {
+                margin: 0 -42px 0 75px;
+            }
+        }
+    }
+}   

@@ -214,15 +214,15 @@ ul {
         height: 10px;
         border: none;
         transform: rotate(-180deg);
-        margin-top: -7px;
-        right: 24px;
+        margin-top: -6px;
+        right: 25px;
     }
 
     &.open {
         &::after {
             transform: rotate(0deg);
             margin-top: -4px;
-            right: 20px;
+            right: 21px;
         }
     }
 
