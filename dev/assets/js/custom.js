@@ -7,23 +7,47 @@ hamburger.addEventListener('click', function (){
 })
 
 
+$('select').niceSelect();
+
 
 $('#first-screen-slider').slick({
+  dots: true,
+  appendArrows: $('.first-screen-arrows'),
+  responsive: [{
+      breakpoint: 1024,
+      settings: {
+        arrows: false
+      }
+    }, ]
+});
+
+
+mobileOnlySlider(".slider-advantages", 1024);
+function mobileOnlySlider($slidername, $breakpoint) {
+  const slider = $($slidername);
+  const settings = {
+    mobileFirst: true,
     dots: true,
-    appendArrows: $('.first-screen-arrows'),
+    arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          arrows: false
-        }
+        breakpoint: $breakpoint,
+        settings: "unslick"
       }
-    ],
+    ]
+  };
 
+  slider.slick(settings);
+
+  $(window).on("resize", function () {
+    if ($(window).width() > $breakpoint) {
+      return;
+    }
+    if (!slider.hasClass("slick-initialized")) {
+      return slider.slick(settings);
+    }
   });
-
-
-$('select').niceSelect();
+} // Mobile Only Slider
 
 
 const fileInput = document.querySelector('#calculation-file');
@@ -33,22 +57,18 @@ fileInput.addEventListener('change', () => {
    fileName.innerHTML = fileInput.files[0].name;
 });
 
-//    то же самое но в полном виде
-// fileInput.addEventListener('change', function() {
-//   console.log(this.files[0].name);
-//   fileName.innerHTML = this.files[0].name;
-// });
 
 const controledField = document.querySelectorAll('[type="checkbox"]');
-
-controledField.forEach(input =>{
-  input.closest('.input-wrapper').classList.add('controled-wrapper')
-  input.closest('.col').classList.add('controled-col')
-})
-
-
 const fileField = document.querySelectorAll('[type="file"]');
+const formBtns = document.querySelectorAll('form .col button')
 
-fileField.forEach(input =>{
-  input.closest('.input-wrapper').classList.add('file-wrapper')
-})
+const addParentClass = (array, parent, className)=> {
+  array.forEach(item=> {
+    item.closest(parent).classList.add(className)
+  })
+}
+
+addParentClass(formBtns, ('.col'), ('mobile-center'))
+addParentClass(fileField, ('.input-wrapper'), ('file-wrapper'))
+addParentClass(controledField, ('.input-wrapper'), ('controled-wrapper'))
+addParentClass(controledField, ('.col'), ('controled-col'))

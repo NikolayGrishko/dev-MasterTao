@@ -29,6 +29,10 @@
         font-size: 15px;
     }
 
+    .has-bg {
+        @include default-bg;
+    }
+
     .container {
         padding-right: $container-mobile-padding;
         padding-left: $container-mobile-padding;
@@ -160,6 +164,10 @@
 
         .input-wrapper.file-wrapper {
             padding-top: 32px;
+        }
+
+        .mobile-center {
+            text-align: center;
         }
     }
 

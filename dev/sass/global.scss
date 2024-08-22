@@ -577,7 +577,6 @@ ul.slick-dots {
 
 
 
-.advantages,
-.services {
-    @include default-bg;
+.has-bg {
+    @include default-bg-lg;
 }
