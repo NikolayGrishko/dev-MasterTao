@@ -14,7 +14,7 @@ $('#first-screen-slider').slick({
   dots: true,
   appendArrows: $('.first-screen-arrows'),
   responsive: [{
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
         arrows: false
       }
@@ -22,7 +22,30 @@ $('#first-screen-slider').slick({
 });
 
 
-mobileOnlySlider(".slider-advantages", 1024);
+$('.slider-template').slick({
+  infinite: true,
+  slidesToShow: 3,
+  arrows: true,
+  responsive: [{
+    breakpoint: 1400,
+    settings: {
+      slidesToShow: 2,
+    }  
+    
+  },
+{
+  breakpoint: 1025,
+  settings: {
+    slidesToShow: 1,
+    arrows: false,
+    dots: true,
+  }  
+}, ]    
+});
+
+
+
+mobileOnlySlider(".slider-advantages", 1025);
 function mobileOnlySlider($slidername, $breakpoint) {
   const slider = $($slidername);
   const settings = {

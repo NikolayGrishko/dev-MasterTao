@@ -215,4 +215,32 @@
             }
         }
     }
+
+
+    .slider-template {
+        max-width: 365px;
+
+        .template-card {
+            padding: 0 23px 27px;
+            box-shadow: 0 15px 15px 0 #181a2c66 ;
+            margin-bottom: 32px;
+
+            .img-box {
+                margin: 0 -23px 27px;
+
+                img {
+                    height: 213px;
+                }
+            }
+        }
+
+        .template-card-row {
+            gap: 13px;
+
+            .btn {
+                padding: 13px 5px;
+            }
+        }
+
+    }
 }   
