@@ -25,22 +25,23 @@
     min-height: 482px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     .img-box {
         margin: 0 -20px 27px;
 
         img {
             height: 229px;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            object-fit: contain;
         }
     }
 }
 
 .template-card-img {
     height: auto;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
     max-height: 229px;
-    object-fit: contain;
 }
 
 .template-card-title {
@@ -48,7 +49,7 @@
     margin-bottom: 11px;
 }
 
-.template-card-options {
+.template-card__options {
     display: flex;
     justify-content: center;
     gap: 36px;
@@ -90,6 +91,7 @@
 
     .btn {
         width: 100%;
+        max-width: 153px;
         justify-content: center;
         padding: 13px 10px;
     }

@@ -220,10 +220,12 @@
     .slider-template {
         max-width: 365px;
 
+        .slick-list {
+            margin-bottom: 32px;
+        }
+
         .template-card {
             padding: 0 23px 27px;
-            box-shadow: 0 15px 15px 0 #181a2c66 ;
-            margin-bottom: 32px;
 
             .img-box {
                 margin: 0 -23px 27px;
@@ -242,5 +244,21 @@
             }
         }
 
+    }
+
+    .services {
+        .template-card {
+            padding: 0 23px 33px 30px;
+            .img-box {
+                img {
+                    height: 100%;
+                    object-fit: initial;
+                }
+            }
+            &__description {
+                margin-bottom: 6px;
+                line-height: 1.15;
+            }
+        }
     }
 }   
