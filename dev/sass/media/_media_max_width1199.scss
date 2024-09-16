@@ -9,6 +9,11 @@
     .first-screen .container {
         padding: 0 92px;
     }
+
+    .company .container {
+        padding: 0 50px;
+        
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -22,5 +27,22 @@
 
     .calculation-decoration {
         width: 38vw;
+    }
+
+    
+}
+
+@media screen and (max-width: 1120px) {
+    .company {
+        .company-decoration {
+
+            img {
+                width: 40vw;
+                top: -118px;
+            }
+            &::after {
+                overflow: hidden;
+            }
+        }
     }
 }
